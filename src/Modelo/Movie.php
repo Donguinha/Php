@@ -1,10 +1,17 @@
 <?php
 
 class Movie {
-    public string $title;
-    public int $year;
-    public string $gender;
-    public array $scores = [];
+    private string $title;
+    private int $year;
+    private string $genre;
+    private array $scores = [];
+    
+    public function __construct(string $title, int $year, string $genre)
+    {
+        $this->title = $title;
+        $this->year = $year;
+        $this->genre = $genre;
+    }
     
     function addMovieScore(float $score): void {
         $this->scores[] = $score;
@@ -13,5 +20,14 @@ class Movie {
     function averageScore(): float {
         
         return (array_sum($this->scores)/ count($this->scores));
+    }
+    public function releasedYear(): int
+    {
+        return $this->year;
+    }
+    
+    public function releaseYear(int $year): void
+    {
+        $this->year = $year;
     }
 }
