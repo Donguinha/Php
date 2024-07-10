@@ -4,18 +4,25 @@ require __DIR__ . "/../src/Modelo/Movie.php";
 
 echo "Bem vindo ao screen match do donguinha\n\n";
 
-$movie = new Movie();
+$movie = new Movie(
+    "Carros",
+    2010,
+    "Animação"
+);
 
-$movie->title = 'Vingadores';
-$movie->year = 1999;
-$movie->gender = 'Heroes';
+echo $movie->releasedYear();
 
-$movie->addMovieScore(2.4);
-$movie->addMovieScore(10);
-$movie->addMovieScore(8.3);
+// $movie->title = 'Vingadores';
+// $movie->year = 1999;
+// $movie->gender = 'Heroes';
 
-echo $movie->averageScore();
+// $movie->addMovieScore(2.4);
+// $movie->addMovieScore(10);
+// $movie->addMovieScore(8.3);
+
+// echo $movie->averageScore();
 
 echo "\n";
 
 var_dump($movie);
+
