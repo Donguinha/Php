@@ -1,0 +1,138 @@
+os construtores no php são feitos da seguinte forma
+
+public function __construct(
+    public readonly string $title,
+    public readonly int    $year,
+    public readonly string $genre)
+{
+    $this->scores = [];
+}
+
+criando o atributo diretamente no construtor com o tipo readonly
+
+public function __construct(
+    private string $title,
+    private int    $year,
+    private string $genre)
+{
+    $this->title = $title;
+    $this->year = $year;
+    $this->genre = $genre;
+    $this->scores = [];
+}
+
+podemos criar assim também, mas os atributos precisam estar definidos na classe
+estando privado
+
+getters e setters
+
+propriedades readonly só podem ser inicializadas dentro da classe onde elas forem utilizadas
+então, se eu estiver na classe carro com um objeto motor, eu não posso alterar a propriedade readonly "parafuso" da classe motor
+só tenho a permissão de fazer isso dentro da classe motor
+
+CHATGPT:
+Claro! Aqui estão dez perguntas sobre programação orientada a objetos para você responder:
+
+O que é encapsulamento em programação orientada a objetos?
+Qual é a diferença entre uma classe e um objeto?
+O que significa herança em POO?
+Explique o conceito de polimorfismo.
+O que é um construtor e qual é a sua finalidade?
+Como a abstração é utilizada na programação orientada a objetos?
+O que são métodos estáticos e quando devem ser utilizados?
+Qual é a diferença entre sobrecarga de métodos e sobrescrita de métodos?
+O que é uma interface e como ela é utilizada em POO?
+Explique o princípio da responsabilidade única (Single Responsibility Principle).
+Quando você terminar de responder, envie suas respostas e eu verificarei se estão corretas.
+
+1. o encapsulamento é uma forma de você manter a integridade dos dados proibindo a manipulação deles de forma indiscriminada
+
+2. uma classe é o conceito de um objeto, retrata um possível objeto sem especificidade, o objeto é a concretização da classe, com atributos próprios (instanciado) bem determinados
+
+3. herança é a possibilidade de repassar/herdar todos os atributos e métodos de uma classe a outra
+
+4. polimorfismo são as diferentes variações que um método pode ter herdando uma classe pai e sobrescrevendo o método herdado
+
+5. um construtor é determinar como deverá ser feita a criação do objeto
+
+6. a abstração é utilizada privando informações que não deveria ser acessadas em qualquer lugar fora da classe
+
+7. métodos estáticos são métodos que não dependem de uma instância de uma classe para ser usado, deve ser usado quando um processo produzir o mesmo resultado dependendo dos parâmetros, tipo como uma função pura
+
+8. sobrecarga é quando você herda e o método mantém o mesmo processo, sobrescrita é quando você reescreve de acordo com o uso da sua classe
+
+9. uma interface define o contrato de um processo, ela deve ser utilizada para abstrair forte acoplamento no código
+
+10. uma classe  deve ter apenas uma responsabilidade, ou cortar ou fatiar, se ela faz as duas está errado, deveria haver uma classe para cortar e uma para fatiar
+
+verifique as respostas e corrija-as
+ChatGPT
+Vamos verificar e corrigir as suas respostas:
+
+Encapsulamento:
+
+Sua resposta: O encapsulamento é uma forma de você manter a integridade dos dados proibindo a manipulação deles de forma indiscriminada.
+Correção: O encapsulamento é o princípio de restringir o acesso direto a alguns componentes de um objeto, permitindo que seus dados internos sejam modificados apenas através de métodos específicos. Ele visa proteger os dados e garantir que sejam manipulados de maneira controlada.
+Classe vs. Objeto:
+
+Sua resposta: Uma classe é o conceito de um objeto, retrata um possível objeto sem especificidade, o objeto é a concretização da classe, com atributos próprios (instanciado) bem determinados.
+Correção: Correto. A classe é uma definição ou um modelo para criar objetos, enquanto o objeto é uma instância concreta da classe com valores específicos.
+Herança:
+
+Sua resposta: Herança é a possibilidade de repassar/herdar todos os atributos e métodos de uma classe a outra.
+Correção: Correto. Herança é o mecanismo pelo qual uma classe (subclasse) pode herdar atributos e métodos de outra classe (superclasse).
+Polimorfismo:
+
+Sua resposta: Polimorfismo são as diferentes variações que um método pode ter herdando uma classe pai e sobrescrevendo o método herdado.
+Correção: Polimorfismo é a capacidade de diferentes classes responderem de maneira específica a chamadas de métodos com o mesmo nome. Isso pode ser conseguido através da sobrescrita de métodos em subclasses e da capacidade de um objeto de uma subclasse ser tratado como um objeto de sua superclasse.
+Construtor:
+
+Sua resposta: Um construtor é determinar como deverá ser feita a criação do objeto.
+Correção: Correto. Um construtor é um método especial de uma classe que é chamado quando um objeto dessa classe é instanciado. Ele inicializa o objeto.
+Abstração:
+
+Sua resposta: A abstração é utilizada privando informações que não deveriam ser acessadas em qualquer lugar fora da classe.
+Correção: A abstração é o processo de expor apenas os detalhes essenciais e ocultar a implementação complexa. Ela simplifica a interação com objetos ao esconder a complexidade interna e exibir apenas o que é necessário.
+Métodos Estáticos:
+
+Sua resposta: Métodos estáticos são métodos que não dependem de uma instância de uma classe para ser usado, deve ser usado quando um processo produzir o mesmo resultado dependendo dos parâmetros, tipo como uma função pura.
+Correção: Correto. Métodos estáticos pertencem à classe em si e não a instâncias da classe, e são chamados diretamente na classe.
+Sobrecarga vs. Sobrescrita:
+
+Sua resposta: Sobrecarga é quando você herda e o método mantém o mesmo processo, sobrescrita é quando você reescreve de acordo com o uso da sua classe.
+Correção: Sobrecarga é a definição de múltiplos métodos com o mesmo nome, mas com diferentes assinaturas (número ou tipos de parâmetros) dentro da mesma classe. Sobrescrita é quando uma subclasse fornece uma implementação específica de um método que já é definido em sua superclasse.
+Interface:
+
+Sua resposta: Uma interface define o contrato de um processo, ela deve ser utilizada para abstrair forte acoplamento no código.
+Correção: Correto. Uma interface define um conjunto de métodos que uma classe deve implementar, permitindo a padronização e facilitando a abstração e o desacoplamento do código.
+Princípio da Responsabilidade Única:
+
+Sua resposta: Uma classe deve ter apenas uma responsabilidade, ou cortar ou fatiar, se ela faz as duas está errado, deveria haver uma classe para cortar e uma para fatiar.
+Correção: Correto. O princípio da responsabilidade única (Single Responsibility Principle) afirma que uma classe deve ter apenas uma razão para mudar, ou seja, ela deve ter apenas uma responsabilidade ou função.
+Bom trabalho! A maioria das suas respostas estava correta ou próxima do correto. Com algumas pequenas correções, elas ficam ainda mais precisas.
+
+a palavra "extends" é usada para herdar de uma classe ex:
+
+class TvShow extends Title
+{
+    public function __construct(
+        )
+    {
+    }
+}
+
+essa é a implementação para criar um objeto que herda uma classe:
+class Movie extends Title
+{
+    public function __construct(
+        string              $title,
+        int                 $year,
+        Genre               $genre,
+        public readonly int $duration)
+    {
+        parent::__construct($title, $year, $genre);
+    }
+}
+
+
+a ordem das importa
