@@ -19,8 +19,11 @@ $tvShow->rate(3.5);
 
 $starsConverter = ConvertNumberToStar::convertNumberToStar($tvShow);
 
+printMessage("nome da série: " . $tvShow->title);
 printMessage("média: " . $tvShow->averageScore());
 printMessage("média em estrelas: " . $starsConverter);
+
+var_dump($tvShow);
 
 function printMessage(string $message): void
 {

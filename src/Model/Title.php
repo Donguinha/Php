@@ -13,13 +13,13 @@ abstract class Title implements Rateable
     ) {
     }
 
-    public function getYear(): int
-    {
-        return $this->year;
-    }
+    // public function getYear(): int
+    // {
+    //     return $this->year;
+    // }
 
-    public function getTitle(): string
-    {
-        return $this->title;
-    }
+    // public function getTitle(): string
+    // {
+    //     return $this->title;
+    // }
 }
