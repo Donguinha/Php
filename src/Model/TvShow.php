@@ -1,6 +1,6 @@
 <?php
 
-namespace ScreenMatch\src\Model;
+namespace Src\Model;
 
 class TvShow extends Title
 {

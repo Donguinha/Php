@@ -1,9 +1,9 @@
 <?php
 
-namespace ScreenMatch\src\Calculations;
+namespace Src\Calculations;
 
-use ScreenMatch\src\Model\Rateable;
-// use ScreenMatch\src\Model\Rateable as RateableInterface;
+use Src\Model\Rateable;
+// use Src\Model\Rateable as RateableInterface;
 
 class ConvertNumberToStar
 {
