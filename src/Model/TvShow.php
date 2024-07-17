@@ -1,5 +1,7 @@
 <?php
 
+namespace ScreenMatch\src\Model;
+
 class TvShow extends Title
 {
     public function __construct(
@@ -8,8 +10,8 @@ class TvShow extends Title
         Genre               $genre,
         public readonly int $seasons,
         public readonly int $episodePerSeason,
-        public readonly int $durationPerEpisode)
-    {
+        public readonly int $durationPerEpisode
+    ) {
         parent::__construct($title, $year, $genre);
     }
 }

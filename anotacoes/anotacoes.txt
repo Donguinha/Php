@@ -135,4 +135,39 @@ class Movie extends Title
 }
 
 
-a ordem das importa
+a ordem das importações faz diferença na hora de executar o programa
+
+
+traits servem para fazer reutilização de código
+exemplo:
+
+trait RateTrait
+{
+    private array $scores = [];
+
+    public function rate(float $score): void
+    {
+        $this->scores[] = $score;
+    }
+
+    public function averageScore(): float
+    {
+        return (array_sum($this->scores) / count($this->scores));
+    }
+}
+
+classe que usa trait
+
+class Episode implements Rateable
+{
+    use RateTrait;
+
+    public function __construct(
+        public readonly TvShow $tvShow,
+        public readonly string $name,
+        public readonly int    $number
+    ) {
+    }
+}
+
+consigo usar as funções implementadas na RateTrait num objeto Episode

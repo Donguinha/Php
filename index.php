@@ -1,14 +1,17 @@
 <?php
 
-require __DIR__ . "/src/Model/Rateable.php";
-require __DIR__ . "/src/Model/Title.php";
-require __DIR__ . "/src/Model/Movie.php";
-require __DIR__ . "/src/Model/Genre.php";
-require __DIR__ . "/src/Model/TvShow.php";
-require __DIR__ . "/src/Calculations/ConvertNumberToStar.php";
+// spl_autoload_register(function (string $className) {
+//     $path = str_replace("ScreenMatch", "src", $className);
+
+//     var_dump($className);
+//     exit;
+// });
+namespace ScreenMatch;
+
+use ScreenMatch\src\Model\{Movie, Episode, Genre, Rateable, Title, TvShow};
+use ScreenMatch\src\Calculations\{ConvertNumberToStar};
 
 echo "Bem vindo ao screen match\n\n";
-
 
 $movie = new Movie(
     "Carros",
@@ -24,7 +27,7 @@ $movie->rate(10);
 $movieStars = ConvertNumberToStar::convertNumberToStar($movie);
 
 echo
-    "average score: " .
+"average score: " .
     $movie->averageScore() .
     "\n" .
     "average score stars conversion: " .
@@ -49,7 +52,7 @@ $tvShowStars = ConvertNumberToStar::convertNumberToStar($tvShow);
 
 
 echo
-    "average score: " .
+"average score: " .
     $tvShow->averageScore() .
     "\n" .
     "average score stars conversion: " .

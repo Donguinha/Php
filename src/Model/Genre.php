@@ -1,6 +1,9 @@
 <?php
 
-enum Genre {
+namespace ScreenMatch\src\Model;
+
+enum Genre
+{
     case Action;
     case Horror;
     case Drama;

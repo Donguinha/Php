@@ -1,25 +1,16 @@
 <?php
 
+namespace ScreenMatch\src\Model;
+
 abstract class Title implements Rateable
 {
-    private array $scores;
+    use RateTrait;
 
     public function __construct(
         public readonly string $title,
         public readonly int    $year,
-        public readonly Genre $genre)
-    {
-        $this->scores = [];
-    }
-
-    public function rate(float $score): void
-    {
-        $this->scores[] = $score;
-    }
-
-    public function averageScore(): float
-    {
-        return (array_sum($this->scores) / count($this->scores));
+        public readonly Genre $genre
+    ) {
     }
 
     public function getYear(): int
