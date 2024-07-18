@@ -189,7 +189,8 @@ No exemplo "ScreenMatch\\": "ScreenMatch/", isso significa que todas as classes 
 namespace ScreenMatch\ serão procuradas na pasta ScreenMatch/.
 Por exemplo, a classe ScreenMatch\MinhaClasse estaria localizada em ScreenMatch/MinhaClasse.php.
 
-"ScreenMatch\\" é o namespace definido e "ScreenMatch/" a pasta
+"ScreenMatch\\" é o namespace definido e "src/" a pasta
+sempre que definir um namespace ScreenMatch/ ele vai tentar buscar o arquivo na pasta src/
 
 
 STACK FRAME é o pedaço de memória que o sistema armazena para cada uma das funções
