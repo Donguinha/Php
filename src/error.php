@@ -10,13 +10,7 @@ use Src\Model\TvShow;
 use Src\Model\Genre;
 use Src\Calculations\ConvertNumberToStar;
 
-$tvShow = new TvShow(
-    "Vikings",
-    2024,
-    Genre::Action,
-    4,
-    5,
-    60);
+$tvShow = new TvShow("Vikings", 2024, Genre::Action, 4, 5, 60);
 
 //$episode = new Episode(
 //    $tvShow,
