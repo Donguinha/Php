@@ -15,6 +15,7 @@
     "phan/phan": "^5.4"
   },
   "scripts": {
+    "execFunction": "Src\\Calculations\\ConvertNumberToStar::stringTest",
     "phpcs": "phpcs --standard=PSR12 src"
   }
 }
