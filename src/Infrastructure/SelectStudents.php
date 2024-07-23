@@ -1,13 +1,12 @@
 <?php
 
-namespace Src\SQL;
+namespace Src\Infrastructure;
 
 use PDO;
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 
-$dataBasePath = __DIR__ . "/banco.sqlite";
-$pdo = new PDO("sqlite:" . $dataBasePath);
+$pdo = ConnectionCreator::createConnection();
 
 $student =
     $pdo

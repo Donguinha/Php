@@ -1,8 +1,9 @@
 <?php
 
-namespace Src\Calculations;
+namespace public\Calculations;
 
-use Src\Model\Rateable;
+use public\Model\Rateable;
+
 // use Src\Model\Rateable as RateableInterface;
 
 class ConvertNumberToStar

@@ -1,6 +1,6 @@
 <?php
 
-namespace Src\Model;
+namespace public\Model;
 
 class Episode implements Rateable
 {

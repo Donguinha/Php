@@ -1,17 +1,15 @@
 <?php
 
-namespace Src\Model;
+namespace public\Model;
 
-class TvShow extends Title
+class Movie extends Title
 {
     public function __construct(
         string              $title,
         int                 $year,
         Genre               $genre,
-        public readonly int $seasons,
-        public readonly int $episodePerSeason,
-        public readonly int $durationPerEpisode)
-    {
+        public readonly int $duration
+    ) {
         parent::__construct($title, $year, $genre);
     }
 }

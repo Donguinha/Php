@@ -4,11 +4,9 @@ namespace Src;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use DateTime;
-use Src\Model\Episode;
-use Src\Model\TvShow;
-use Src\Model\Genre;
-use Src\Calculations\ConvertNumberToStar;
+use public\Calculations\ConvertNumberToStar;
+use public\Model\Genre;
+use public\Model\TvShow;
 
 $tvShow = new TvShow("Vikings", 2024, Genre::Action, 4, 5, 60);
 
