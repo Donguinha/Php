@@ -198,3 +198,5 @@ STACK FRAME é o pedaço de memória que o sistema armazena para cada uma das fu
 STACK TRACE é o caminho da pilha de chamadas que está sendo executada 
 
 CALL STACK é a pilha de chamadas das funções
+
+Mutabilidade: É mutável, ou seja, você pode modificar após a criação do objeto.

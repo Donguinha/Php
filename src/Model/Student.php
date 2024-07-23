@@ -6,14 +6,14 @@ use DateTime;
 
 class Student
 {
-    public readonly int $id;
-    public readonly string $name;
-    public readonly DateTime $createdAt;
+    public int $id;
+    public string $name;
+    public DateTime $createdAt;
 
-    public function __construct(
-        string $name,
-    ) {
-        $this->name = $name;
-        $this->createdAt = new DateTime();
-    }
+//    public function __construct(
+//        string $name,
+//    ) {
+//        $this->name = $name;
+//        $this->createdAt = new DateTime();
+//    }
 }
