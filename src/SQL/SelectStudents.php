@@ -9,4 +9,6 @@ $pdo = new \PDO("sqlite:" . $dataBasePath);
 
 $statement = $pdo->query("SELECT * FROM student;");
 
-var_dump($statement->fetchAll());
+$student  = $statement->fetchAll();
+
+echo $student[2]['name'];
