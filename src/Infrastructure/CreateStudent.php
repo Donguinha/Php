@@ -2,7 +2,7 @@
 
 namespace Src\Infrastructure;
 
-use Src\Domain\Student;
+use Src\Domain\Model\Student;
 
 require __DIR__ . '/../../vendor/autoload.php';
 

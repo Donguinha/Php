@@ -1,8 +1,8 @@
 <?php
 
-namespace public\Calculations;
+namespace OldTests\public\Calculations;
 
-use public\Model\Rateable;
+use OldTests\public\Model\Rateable;
 
 // use Src\Model\Rateable as RateableInterface;
 

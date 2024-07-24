@@ -1,6 +1,6 @@
 <?php
 
-namespace public\Model;
+namespace OldTests\public\Model;
 
 class Movie extends Title
 {

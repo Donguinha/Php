@@ -1,6 +1,6 @@
 <?php
 
-namespace public\Model;
+namespace OldTests\public\Model;
 
 abstract class Title implements Rateable
 {
