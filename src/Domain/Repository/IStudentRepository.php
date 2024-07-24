@@ -6,9 +6,8 @@ use Src\Domain\Model\Student;
 
 interface IStudentRepository
 {
-    public function getStudents(): array;
-    public function getStudent(int $id): Student;
-    public function save(Student $student): bool;
+    public function allStudents(): array;
+    public function studentById(int $id): Student;
     public function remove(Student $student): bool;
 
 }
