@@ -20,8 +20,8 @@ $student = new Student("ConnectionCreator");
 //segunda forma
 $sqlInsert = "INSERT INTO student (name, created_at) VALUES (:name, :created_at);";
 $statement = $pdo->prepare($sqlInsert);
-$statement->bindValue(":name", $student->name);
-$statement->bindValue(":created_at", $student->createdAt->format('Y-m-d H:i:s'));
+$statement->bindValue(":name", $student->getName());
+$statement->bindValue(":created_at", $student->getCreatedAt()->format('Y-m-d H:i:s'));
 
 if ($statement->execute()) {
     echo "Added successfully";
