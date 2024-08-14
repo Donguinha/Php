@@ -7,7 +7,6 @@
     <title>Teste</title>
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
     <script src="{{ asset('assets/js/app.js') }}"></script>
-
 </head>
 
 <body class="body">
@@ -15,8 +14,7 @@
         <div class="left-column ">
             <div>
                 <h1 class="text-center">FIRST HOME1</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, ab cum facilis voluptate ea nobis provident magnam repellendus eligendi pariatur assumenda repellat libero! Labore quae nemo asperiores facilis rem dolor!</p>
-                <!-- Conteúdo da coluna esquerda -->
+                <a href="https://donguinha.github.io/portfolio/" target="_blank">meu site</a>
             </div>
             <div>
                 <h1>SECOND HOME1</h1>
